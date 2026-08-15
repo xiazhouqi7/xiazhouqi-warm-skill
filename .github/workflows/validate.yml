@@ -1,0 +1,65 @@
+name: Validate Skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        shell: bash
+        run: |
+          required=(
+            README.md
+            README.zh-CN.md
+            SKILL.md
+            AI-HANDOFF.md
+            CHANGELOG.md
+            VERSION
+            tokens.css
+            reference.html
+            LICENSE
+          )
+
+          for file in "${required[@]}"; do
+            [[ -f "$file" ]] || { echo "Missing required file: $file" >&2; exit 1; }
+          done
+
+      - name: Check version consistency
+        shell: bash
+        run: |
+          VERSION="$(tr -d '[:space:]' < VERSION)"
+
+          grep -q "^version: $VERSION$" SKILL.md || {
+            echo "SKILL.md version does not match VERSION=$VERSION" >&2
+            exit 1
+          }
+
+          grep -q "^## v$VERSION " CHANGELOG.md || {
+            echo "CHANGELOG.md has no v$VERSION entry" >&2
+            exit 1
+          }
+
+          grep -q "v$VERSION" README.md || exit 1
+          grep -q "v$VERSION" README.zh-CN.md || exit 1
+
+      - name: Check reference HTML self-contained
+        shell: bash
+        run: |
+          if grep -RniE "https?://[^[:space:]]+\.(css|js)" reference.html examples/*.html; then
+            echo "External CSS/JS dependency found" >&2
+            exit 1
+          fi
+
+      - name: Summary
+        run: echo "Xiazhouqi Warm $(cat VERSION) validation passed"
