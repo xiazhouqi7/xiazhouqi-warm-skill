@@ -4,6 +4,8 @@
 
 [简体中文](./README.zh-CN.md) · [Full specification](./SKILL.md) · [AI handoff](./AI-HANDOFF.md) · [Changelog](./CHANGELOG.md)
 
+Part of the **[Xiazhouqi](https://xiazhouqi7.com)** design system.
+
 ## One-line definition
 
 **Warm, not sugary. Soft, not childish. Glassy, not flashy. Poetic, not vague.**
@@ -68,6 +70,12 @@ For highly dense financial / account management pages where information speed ma
 ## Trigger phrases
 
 `xiazhouqi-warm` · `Xiazhouqi Warm` · `下周七·暖杏` · `下周七风格` · `奶杏风` · `暖杏风` · `奶杏+淡橙` · `柔和毛玻璃` · `温柔但高级`
+
+## Xiazhouqi system
+
+- **[Clear](https://github.com/xiazhouqi7/xiazhouqi-clear-skill)** — restrained, information-first interface design
+- **Warm** — soft, warm and personal visual design
+- **[Photography](https://github.com/xiazhouqi7/xiazhouqi-photography-skill)** — photography, grading and visual storytelling
 
 ## License
 
