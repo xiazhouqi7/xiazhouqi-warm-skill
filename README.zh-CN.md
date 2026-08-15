@@ -4,6 +4,8 @@
 
 [English](./README.md) · [完整 Skill](./SKILL.md) · [给其他 AI 的交接说明](./AI-HANDOFF.md) · [更新记录](./CHANGELOG.md)
 
+属于 **[Xiazhouqi](https://xiazhouqi7.com)** 设计体系。
+
 ## 一句话定义
 
 > **温暖但不甜腻，柔和但不幼态，毛玻璃但不炫技，文艺但不空泛**
@@ -51,6 +53,12 @@ Warm 的核心不是“把页面染成米黄色”，而是用 **奶杏底色 + 
 ## 触发词
 
 `xiazhouqi-warm` · `Xiazhouqi Warm` · `下周七·暖杏` · `下周七风格` · `奶杏风` · `暖杏风` · `奶杏+淡橙` · `柔和毛玻璃` · `温柔但高级`
+
+## Xiazhouqi 体系
+
+- **[Clear](https://github.com/xiazhouqi7/xiazhouqi-clear-skill)** — 清透、克制、信息优先的界面设计
+- **Warm** — 温暖、柔和、偏个人化的视觉设计
+- **[Photography](https://github.com/xiazhouqi7/xiazhouqi-photography-skill)** — 摄影、调色与视觉叙事
 
 ## License
 
